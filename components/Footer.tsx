@@ -38,14 +38,14 @@ export default function Footer() {
                         </h3>
                         <div className="flex gap-4">
                             <a 
-                                href="#" 
+                                href="https://www.instagram.com/smkn2.kotabks/"  target="blank"
                                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-white hover:text-black transition duration-300"
                                 aria-label="Instagram"
                             >
                                 <FontAwesomeIcon icon={faInstagram} className="w-5 h-5" />
                             </a>
                             <a 
-                                href="#" 
+                                href="https://id.linkedin.com/school/smkn2kotabekasi/" target="blank"
                                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-white hover:text-black transition duration-300"
                                 aria-label="LinkedIn"
                             >
