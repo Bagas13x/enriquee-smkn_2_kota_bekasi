@@ -8,7 +8,7 @@ export default function About() {
   const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="bg-white">
+    <div className="bg-white" id="about">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 py-8 md:py-12 lg:py-16">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 md:mb-12 lg:mb-16">
           Tentang Kami

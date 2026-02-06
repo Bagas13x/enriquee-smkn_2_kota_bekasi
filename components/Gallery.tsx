@@ -60,7 +60,7 @@ export default function Gallery() {
   }, [selectedImage]);
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen" id="artworks">
       <div
         style={{
           maxWidth: `${GALLERY_CONFIG.containerMaxWidth}px`,
