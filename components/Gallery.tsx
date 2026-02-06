@@ -26,6 +26,7 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [gap, setGap] = useState(19);
+  const [paddingBottom, setPaddingBottom] = useState("1rem");
 
   const openModal = (index: number) => {
     setSelectedImage(index);
@@ -51,8 +52,10 @@ export default function Gallery() {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setGap(8);
+        setPaddingBottom("0.5rem");
       } else {
         setGap(19);
+        setPaddingBottom("1rem");
       }
     };
 
@@ -81,7 +84,7 @@ export default function Gallery() {
         style={{
           maxWidth: `${GALLERY_CONFIG.containerMaxWidth}px`,
           margin: "0 auto",
-          padding: "2rem 1.5rem 1rem 1.5rem",
+          padding: `2rem 1.5rem ${paddingBottom} 1.5rem`,
         }}
       >
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-12 lg:mb-16">
