@@ -5,10 +5,11 @@ import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Services from "@/components/Services";
-
+import Review from "@/components/Review";
 export default function Home() {
   return (
     <>
+<<<<<<< HEAD
       <Navbar />
       <Hero />
       <About />
@@ -16,6 +17,10 @@ export default function Home() {
       <Services />
       <Contact />
       <Footer />
+=======
+    <Services />
+    <Review />
+>>>>>>> afb301a3190c6133333a4e1c86c81474dd71bdbf
     </>
   );
 }
