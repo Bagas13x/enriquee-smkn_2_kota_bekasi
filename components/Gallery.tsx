@@ -27,6 +27,7 @@ export default function Gallery() {
   const [isHovered, setIsHovered] = useState(false);
   const [gap, setGap] = useState(19);
   const [paddingBottom, setPaddingBottom] = useState("1rem");
+  const [gridMarginBottom, setGridMarginBottom] = useState("1.5rem");
 
   const openModal = (index: number) => {
     setSelectedImage(index);
@@ -52,10 +53,12 @@ export default function Gallery() {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setGap(8);
-        setPaddingBottom("0.5rem");
+        setPaddingBottom("0.25rem");
+        setGridMarginBottom("0.75rem");
       } else {
         setGap(19);
         setPaddingBottom("1rem");
+        setGridMarginBottom("1.5rem");
       }
     };
 
@@ -97,7 +100,7 @@ export default function Gallery() {
             gridTemplateColumns: "repeat(8, 1fr)",
             gap: `${gap}px`,
             width: "100%",
-            marginBottom: "1.5rem",
+            marginBottom: gridMarginBottom,
             aspectRatio: "16 / 9",
           }}
         >
@@ -271,7 +274,7 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-2 md:mt-6">
           <button
             onClick={() => router.push("#")}
             onMouseEnter={() => setIsHovered(true)}
