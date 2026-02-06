@@ -28,7 +28,6 @@ export default function Services() {
                     <div className="-top-20 -left-20 absolute pointer-events-none rounded-full border-[120px] border-b-emerald-400 border-l-colorPrimary border-t-emerald-300 blur-[240px]"></div>
                     <div className="-top-20 -right-20 absolute pointer-events-none rounded-full border-[120px] border-b-emerald-400 border-l-colorPrimary border-t-emerald-300 blur-[240px]"></div>
                 </div>
-                {/* untuk emnampilkan service card */}
                 <div className="mt-20">
                     {servicesm.map((service, index) => (
                         <ServiceCard service={service} key={index}/>

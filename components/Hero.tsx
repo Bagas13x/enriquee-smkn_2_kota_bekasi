@@ -10,19 +10,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const slides = [
   {
-    title: "Title 1",
+    title: "Bangun Masa Depan Digital Anda",
     image: Slides1,
-    badge: "Mountain View",
+    badge: "Futuristic",
   },
   {
-    title: "Mountain View 2",
+    title: "Explorasi Seni Digital Bersama Kami",
     image: Slides2,
-    badge: "Kata-kata slide 2",
+    badge: "LakeSide",
   },
   {
-    title: "Mountain View 3",
+    title: "Seni Adalah Ledakan!! -- Deidara",
     image: Slides3,
-    badge: "Kata-kata slide 3",
+    badge: "Mountain",
   },
 ];
 
@@ -69,10 +69,10 @@ export default function Hero() {
                     {slide.title}
                   </h1>
 
-                  <div className="grid grid-cols-2 sm:flex gap-3 w-full sm:w-auto">
+                  <div className="flex gap-3 w-full sm:w-auto">
                     <Link
                       href={"#contact"}
-                      className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-black rounded-full px-4 py-3 hover:bg-gray-100 transition font-semibold"
+                      className="flex items-center justify-center gap-2 bg-white text-black rounded-full px-4 py-3 hover:bg-gray-100 transition font-semibold"
                     >
                       Kontak
                       <FontAwesomeIcon
@@ -83,7 +83,7 @@ export default function Hero() {
 
                     <Link
                       href={"#contact"}
-                      className="w-full sm:w-auto flex items-center justify-center gap-2 bg-gray-800 text-white rounded-full px-4 py-3 hover:bg-gray-700 transition font-semibold border border-gray-600"
+                      className="flex items-center justify-center gap-2 bg-gray-800 text-white rounded-full px-4 py-3 hover:bg-gray-700 transition font-semibold border border-gray-600"
                     >
                       Testimoni
                       <FontAwesomeIcon
