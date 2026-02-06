@@ -81,7 +81,7 @@ export default function Gallery() {
         style={{
           maxWidth: `${GALLERY_CONFIG.containerMaxWidth}px`,
           margin: "0 auto",
-          padding: "2rem 1.5rem",
+          padding: "2rem 1.5rem 1rem 1.5rem",
         }}
       >
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-12 lg:mb-16">
@@ -94,7 +94,7 @@ export default function Gallery() {
             gridTemplateColumns: "repeat(8, 1fr)",
             gap: `${gap}px`,
             width: "100%",
-            marginBottom: "3rem",
+            marginBottom: "1.5rem",
             aspectRatio: "16 / 9",
           }}
         >
@@ -268,7 +268,7 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-6">
           <button
             onClick={() => router.push("#")}
             onMouseEnter={() => setIsHovered(true)}
