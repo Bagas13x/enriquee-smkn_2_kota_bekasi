@@ -54,7 +54,7 @@ export default function Gallery() {
       if (window.innerWidth < 768) {
         setGap(8);
         setPaddingBottom("0rem");
-        setGridMarginBottom("0.25rem");
+        setGridMarginBottom("0rem");
       } else {
         setGap(19);
         setPaddingBottom("1rem");

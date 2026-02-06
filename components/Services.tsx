@@ -37,8 +37,8 @@ export default function Services() {
     return (
         <>
         <div id="services">
-            <div className="relative overflow-hidden bg-black min-h-screen px-4 py-6">
-                <div className="m-10">
+            <div className="relative overflow-hidden bg-black min-h-screen px-4 py-2 md:py-6">
+                <div className="m-4 md:m-10">
                     <div className="flex items-center justify-center space-x-4 relative z-0 ">
                         <h1 className="relative z-0 text-colorPrimary text-2xl font-bold text-center md:text-5xl">Layanan Kami</h1>
                     </div>
@@ -46,7 +46,7 @@ export default function Services() {
                     <div className="-top-20 -left-20 absolute pointer-events-none rounded-full border-[120px] border-b-emerald-400 border-l-colorPrimary border-t-emerald-300 blur-[240px]"></div>
                     <div className="-top-20 -right-20 absolute pointer-events-none rounded-full border-[120px] border-b-emerald-400 border-l-colorPrimary border-t-emerald-300 blur-[240px]"></div>
                 </div>
-                <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div className="mt-6 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     {(() => {
                         const half = Math.ceil(servicesm.length / 2);
                         const left = servicesm.slice(0, half);
