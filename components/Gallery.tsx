@@ -25,6 +25,7 @@ export default function Gallery() {
   const router = useRouter();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [gap, setGap] = useState(19);
 
   const openModal = (index: number) => {
     setSelectedImage(index);
@@ -45,6 +46,21 @@ export default function Gallery() {
       setSelectedImage((selectedImage - 1 + Images.length) % Images.length);
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setGap(8);
+      } else {
+        setGap(19);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -76,7 +92,7 @@ export default function Gallery() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(8, 1fr)",
-            gap: `${GALLERY_CONFIG.gap}px`,
+            gap: `${gap}px`,
             width: "100%",
             marginBottom: "3rem",
             aspectRatio: "16 / 9",
