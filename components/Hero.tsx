@@ -42,7 +42,7 @@ export default function Hero() {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"}`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
             style={{
               backgroundImage: `url(${slide.image.src})`,
               backgroundSize: "cover",
@@ -51,7 +51,7 @@ export default function Hero() {
           ></div>
         ))}
 
-        <div className="absolute inset-0 bg-black/60 backdrop-brightness-75" />
+        <div className="absolute inset-0 bg-black/60 backdrop-brightness-75 pointer-events-none" />
         
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-16 py-24 sm:py-28">
           <div className="mx-auto max-w-7xl">
@@ -59,7 +59,7 @@ export default function Hero() {
               {slides.map((slide, index) => (
                 <div
                   key={index}
-                  className={`transition-opacity duration-700 ${index === currentSlide ? "opacity-100" : "opacity-0 absolute"}`}
+                  className={`transition-opacity duration-700 ${index === currentSlide ? "opacity-100 pointer-events-auto" : "opacity-0 absolute pointer-events-none"}`}
                 >
                   <span className="inline-block mb-5 bg-lime-400 text-black px-4 sm:px-6 py-2 rounded-full font-semibold text-xs sm:text-sm">
                     {slide.badge}
@@ -70,7 +70,7 @@ export default function Hero() {
                   </h1>
 
                   <div className="flex gap-3 w-full sm:w-auto">
-                    <Link
+                    <a
                       href={"#contact"}
                       className="flex items-center justify-center gap-2 bg-white text-black rounded-full px-4 py-3 hover:bg-gray-100 transition font-semibold"
                     >
@@ -79,9 +79,9 @@ export default function Hero() {
                         icon={faUpRightFromSquare}
                         className="w-3 h-3 sm:w-4 sm:h-4"
                       />
-                    </Link>
+                    </a>
 
-                    <Link
+                    <a
                       href={"#testimonials"}
                       className="flex items-center justify-center gap-2 bg-gray-800 text-white rounded-full px-4 py-3 hover:bg-gray-700 transition font-semibold border border-gray-600"
                     >
@@ -90,7 +90,7 @@ export default function Hero() {
                         icon={faUpRightFromSquare}
                         className="w-3 h-3 sm:w-4 sm:h-4"
                       />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               ))}
