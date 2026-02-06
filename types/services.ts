@@ -3,6 +3,6 @@ import { StaticImageData } from "next/image";
 export interface Service {
     title:string;
     description:string;
-    image:String | StaticImageData;
+    image:string | StaticImageData;
     category?:string[];
 }
