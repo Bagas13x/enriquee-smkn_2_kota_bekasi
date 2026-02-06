@@ -37,41 +37,10 @@ export default function About() {
                 className="w-full h-auto object-cover"
               />
 
-              <button
-                onClick={() => router.push("/contact")}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                className="absolute top-4 right-4 bg-lime-400/30 hover:bg-lime-400/50 backdrop-blur-md border border-lime-400/50 text-gray-900 font-bold px-5 py-2.5 rounded-full flex items-center gap-2 transition-all duration-300 shadow-lg text-sm md:text-base hover:scale-105 active:scale-95"
-                style={{
-                  boxShadow: isHovered
-                    ? "inset 0 1px 2px rgba(255,255,255,0.5), 0 12px 40px rgba(184, 212, 56, 0.4)"
-                    : "inset 0 1px 2px rgba(255,255,255,0.5), 0 8px 32px rgba(31,38,135,0.37)",
-                }}
-              >
-                Kontak
-                <div
-                  className="bg-gray-900 rounded-full p-3 transition-all duration-300"
-                  style={{
-                    transform: isHovered
-                      ? "rotate(45deg) scale(1.1)"
-                      : "rotate(0deg) scale(1)",
-                  }}
-                >
-                  <svg
-                    className="w-4 h-4 text-lime-400 transition-all duration-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={3}
-                      d="M7 17L17 7M17 7H7M17 7v10"
-                    />
-                  </svg>
+              
+                
+                  
                 </div>
-              </button>
             </div>
 
             {/* Description Text */}
@@ -83,6 +52,5 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
