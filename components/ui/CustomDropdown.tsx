@@ -40,7 +40,7 @@ export default function CustomDropdown({
             <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl bg-white text-gray-800 cursor-pointer focus:outline-none focus:border-black focus:ring-2 focus:ring-gray-200 transition duration-300 text-left flex items-center justify-between"
+                className="w-full px-4 py-3 border-b-2 border-gray-300 rounded-xl bg-white text-gray-800 cursor-pointer focus:outline-none focus:border-black focus:ring-2 focus:ring-gray-200 transition duration-300 text-left flex items-center justify-between"
             >
                 <span className={selectedOption ? "text-gray-800" : "text-gray-500"}>
                     {selectedOption ? selectedOption.label : placeholder}
