@@ -19,15 +19,31 @@ export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
+        <>
+        <style jsx>{
+        `
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }   
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        `
+        }
+        </style>
         <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-6 md:px-8 lg:px-16 transition-all duration-300">
             <div className="mx-auto max-w-7xl">
                 <div className="px-8 py-3 flex justify-between items-center transition-all duration-300">
                     <Link href="/" className="flex items-center">
-                        <div className="w-10 h-10 rounded-full overflow-hidden">
+                        <div className="rounded-full overflow-hidden">
                             <Image 
                                 src={Smkn2}
-                                width={40}
-                                height={40}
+                                width={48}
+                                height={48}
                                 alt="Logo SMKN 2 KOTA BEKASI"
                                 className="object-cover"
                                 priority
@@ -41,9 +57,7 @@ export default function Navbar() {
                             href={item.href}
                             key={index}
                             className="relative font-bold text-sm tracking-wide py-2 transition-colors duration-300 group text-white"
-                            
                             >
-
                                 {item.name}
                             <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" />
                             </Link>
@@ -52,7 +66,7 @@ export default function Navbar() {
 
                     <Button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="lg:hidden w-10 h-10 flex items-center justify-center bg-transparent hover:bg-transparent transition-colors duration-300 text-white"
+                    className="lg:hidden w-10 h-10 flex items-center justify-center bg-transparent hover:bg-transparent transition-colors duration-300 text-white rounded-full"
                     >
                         <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} 
                         className="w-6 h-6"/>
@@ -78,5 +92,6 @@ export default function Navbar() {
                 )}
             </div>
         </nav>
+        </>
     );
 }
