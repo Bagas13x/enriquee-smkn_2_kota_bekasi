@@ -23,9 +23,9 @@ export default function Contact(){
                     >
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.6476947100011!2d106.99074866803045!3d-6.355796060368484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698c22161d4051%3A0x7a0a35b288779341!2sSMKN%202%20Kota%20Bekasi!5e0!3m2!1sen!2sid!4v1770349340982!5m2!1sen!2sid" 
-                            className="w-full h-full" 
+                            className="w-full h                            allowFullScreen="" 
+-full" 
                             style={{border: "none"}} 
-                            allowFullScreen="" 
                             loading="lazy" 
                             referrerPolicy="no-referrer-when-downgrade"
                         />
