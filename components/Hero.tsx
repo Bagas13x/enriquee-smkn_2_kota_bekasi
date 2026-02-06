@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const slides = [
   {
-    title: "Bangun Masa Depan Digital Anda",
+    title: "Wujudkan Imajinasi Digital Anda",
     image: Slides1,
     badge: "Futuristic",
   },
