@@ -53,8 +53,8 @@ export default function Gallery() {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setGap(8);
-        setPaddingBottom("0.25rem");
-        setGridMarginBottom("0.75rem");
+        setPaddingBottom("0rem");
+        setGridMarginBottom("0.25rem");
       } else {
         setGap(19);
         setPaddingBottom("1rem");
@@ -274,7 +274,7 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div className="flex justify-center mt-2 md:mt-6">
+        <div className="flex justify-center mt-0 md:mt-6">
           <button
             onClick={() => router.push("#")}
             onMouseEnter={() => setIsHovered(true)}
