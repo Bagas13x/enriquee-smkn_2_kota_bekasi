@@ -19,17 +19,16 @@ export default function ServiceCard({ service }: ServiceCardProps) {
                         <div className="flex flex-warp  gap-2">
                             {
                                 category && category.map((cat, index) => (
-                                    <span key={index} className= "px-3 py-1 text-[10px] uppercase tracking-wider font-bold bg-colorPrimary/20  text-colorPrimary border border-colorPrimary/30 rounded-full">{cat}</span>
+                                    <span key={index} className="px-3 py-1 text-[10px] uppercase tracking-wider font-bold bg-colorPrimary/20  text-colorPrimary border border-colorPrimary/30 rounded-full">{cat}</span>
                                 ))
                             }
                         </div>
-                    </div>
-                    <div className="flex justify-between  items-start">
-                        <h2 className="text-2xl font-bold bg-linear-to-r from-white to-lime-300/60 bg-clip-text text-transparent group-hover:text-colorPrimary transition-colors  ">{title}</h2>
+                        <div className="flex justify-between  items-start">
+                            <h2 className="text-2xl font-bold bg-linear-to-r from-white to-lime-300/60 bg-clip-text text-transparent group-hover:text-colorPrimary transition-colors  ">{title}</h2>
+                        </div>
+                        <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 group-hover:text-gray-300 transition-colors">{description}</p>
                     </div>
                 </div>
-
-
             </div>
         </>
     )
