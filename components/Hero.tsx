@@ -82,7 +82,7 @@ export default function Hero() {
                     </Link>
 
                     <Link
-                      href={"#contact"}
+                      href={"#testimonials"}
                       className="flex items-center justify-center gap-2 bg-gray-800 text-white rounded-full px-4 py-3 hover:bg-gray-700 transition font-semibold border border-gray-600"
                     >
                       Testimoni

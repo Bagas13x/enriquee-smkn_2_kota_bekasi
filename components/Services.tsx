@@ -46,10 +46,26 @@ export default function Services() {
                     <div className="-top-20 -left-20 absolute pointer-events-none rounded-full border-[120px] border-b-emerald-400 border-l-colorPrimary border-t-emerald-300 blur-[240px]"></div>
                     <div className="-top-20 -right-20 absolute pointer-events-none rounded-full border-[120px] border-b-emerald-400 border-l-colorPrimary border-t-emerald-300 blur-[240px]"></div>
                 </div>
-                <div className="mt-20">
-                    {servicesm.map((service, index) => (
-                        <ServiceCard service={service} key={index}/>
-                    ))}
+                <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    {(() => {
+                        const half = Math.ceil(servicesm.length / 2);
+                        const left = servicesm.slice(0, half);
+                        const right = servicesm.slice(half);
+                        return (
+                            <>
+                                <div className="flex flex-col gap-6">
+                                    {left.map((service, index) => (
+                                        <ServiceCard service={service} key={index} />
+                                    ))}
+                                </div>
+                                <div className="flex flex-col gap-6">
+                                    {right.map((service, index) => (
+                                        <ServiceCard service={service} key={index + half} />
+                                    ))}
+                                </div>
+                            </>
+                        );
+                    })()}
                 </div>
             </div>
             </div>

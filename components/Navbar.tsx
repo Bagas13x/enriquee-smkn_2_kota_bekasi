@@ -9,10 +9,11 @@ import { faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const menuItems = [
-    { name: "Beranda", href: "#home"},
+    { name: "Beranda", href: "/"},
     { name: "Tentang Kami", href: "#about"},
     { name: "Karya Kami", href: "#artworks"},
     { name: "Layanan", href: "#services"},
+    { name: "Testimoni", href: "#testimonials"},
     { name: "Kontak", href: "#contact"},
 ]
 
